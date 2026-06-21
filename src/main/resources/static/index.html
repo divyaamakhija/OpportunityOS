@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OpportunityOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🚀 OpportunityOS</h1>
+
+    <h3>Career Roadmap Generator</h3>
+
+    <select id="role">
+        <option>AI</option>
+        <option>Web</option>
+        <option>Cyber</option>
+    </select>
+
+    <button onclick="generateRoadmap()">
+        Generate Roadmap
+    </button>
+
+    <div id="result"></div>
+
+</div>
+
+<script src="script.js"></script>
+<hr>
+
+<h2>Skill Gap Analyzer</h2>
+
+<input
+        id="skills"
+        placeholder="Enter skills separated by commas">
+
+<select id="skillRole">
+    <option>AI</option>
+    <option>Web</option>
+    <option>Cyber</option>
+</select>
+
+<button onclick="analyzeSkills()">
+    Analyze Skills
+</button>
+
+<div id="skillResult"></div>
+
+<h2>Resume Analyzer</h2>
+
+<textarea
+        id="resume"
+        rows="8"
+        cols="50"
+        placeholder="Paste your resume here">
+</textarea>
+
+<br><br>
+
+<button onclick="analyzeResume()">
+    Analyze Resume
+</button>
+
+</body>
+</html>
