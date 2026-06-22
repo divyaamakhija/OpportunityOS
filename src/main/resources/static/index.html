@@ -1,40 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OpportunityOS</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<nav>
+<nav class="navbar">
     <h2>🚀 OpportunityOS</h2>
-    <a href="https://github.com/divyaamakhija">
-        GitHub
-    </a>
 </nav>
 
 <section class="hero">
+
     <h1>Shape Your Tech Career</h1>
+
     <p>
-        Generate career roadmaps, analyze skill gaps,
-        and improve your resume with OpportunityOS.
+        Generate career roadmaps and analyze skill gaps
+        with OpportunityOS.
     </p>
+
 </section>
 
-<div class="cards-container">
+<section class="cards">
+
+    <!-- Roadmap -->
 
     <div class="card">
 
         <h2>Career Roadmap Generator</h2>
 
         <select id="role">
+
             <option>AI Engineer</option>
+
             <option>Frontend Developer</option>
+
             <option>Backend Developer</option>
+
             <option>Cybersecurity Analyst</option>
-            <option>Data Scientist</option>
+
         </select>
 
         <button onclick="generateRoadmap()">
@@ -45,20 +54,27 @@
 
     </div>
 
+    <!-- Skill Gap -->
+
     <div class="card">
 
         <h2>Skill Gap Analyzer</h2>
 
         <input
+                type="text"
                 id="skills"
                 placeholder="Enter skills separated by commas">
 
         <select id="skillRole">
+
             <option>AI Engineer</option>
+
             <option>Frontend Developer</option>
+
             <option>Backend Developer</option>
+
             <option>Cybersecurity Analyst</option>
-            <option>Data Scientist</option>
+
         </select>
 
         <button onclick="analyzeSkills()">
@@ -69,39 +85,24 @@
 
     </div>
 
-    <div class="card">
+</section>
 
-        <h2>Resume Analyzer</h2>
+<section class="about">
 
-        <textarea
-                id="resume"
-                rows="8"
-                placeholder="Paste your resume here">
-        </textarea>
+    <h2>About OpportunityOS</h2>
 
-        <button onclick="analyzeResume()">
-            Analyze Resume
-        </button>
+    <p>
+        OpportunityOS helps students identify career paths,
+        analyze skill gaps and improve employability through
+        personalized recommendations.
+    </p>
 
-        <div id="resumeResult"></div>
-
-    </div>
-    <section class="about">
-        <h2>About OpportunityOS</h2>
-
-        <p>
-            OpportunityOS helps students identify career paths,
-            analyze skill gaps and improve employability through
-            personalized recommendations.
-        </p>
-    </section>
-
-</div>
+</section>
 
 <footer>
-    <p>
-        Built by Divyaa Makhija • VESIT ECS • OpportunityOS 2026
-    </p>
+
+    Built by Divyaa Makhija • VESIT ECS • OpportunityOS 2026
+
 </footer>
 
 <script src="script.js"></script>
