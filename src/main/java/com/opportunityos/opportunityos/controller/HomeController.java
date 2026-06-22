@@ -10,7 +10,7 @@ public class HomeController {
     @GetMapping("/roadmap")
     public String roadmap(@RequestParam String role) {
 
-        if (role.equalsIgnoreCase("AI")) {
+        if (role.equalsIgnoreCase("AI Engineer")) {
             return pageTemplate(
                     "AI Roadmap",
                     """
@@ -28,7 +28,7 @@ public class HomeController {
             );
         }
 
-        if (role.equalsIgnoreCase("Web")) {
+        if (role.equalsIgnoreCase("Web Developer")) {
             return pageTemplate(
                     "Web Roadmap",
                     """
@@ -46,7 +46,7 @@ public class HomeController {
             );
         }
 
-        if (role.equalsIgnoreCase("Cyber")) {
+        if (role.equalsIgnoreCase("Cyber Security")) {
             return pageTemplate(
                     "Cyber Roadmap",
                     """
@@ -74,14 +74,14 @@ public class HomeController {
             @RequestParam String skills,
             @RequestParam String role) {
 
-        if (role.equalsIgnoreCase("AI")) {
+        if (role.equalsIgnoreCase("AI Engineer")) {
 
             return pageTemplate(
                     "Skill Gap Analysis",
                     """
                     <h1>📊 AI Skill Gap Analysis</h1>
 
-                    <p>Your Skills:</p>
+                    <h2>Recommended Skills</h2>
 
                     <ul>
                         <li>Python</li>
@@ -93,7 +93,7 @@ public class HomeController {
             );
         }
 
-        if (role.equalsIgnoreCase("Web")) {
+        if (role.equalsIgnoreCase("Web Developer")) {
 
             return pageTemplate(
                     "Skill Gap Analysis",
@@ -109,17 +109,25 @@ public class HomeController {
             );
         }
 
-        return pageTemplate(
-                "Skill Gap Analysis",
-                """
-                <h1>📊 Cyber Security Skill Gap</h1>
+        if (role.equalsIgnoreCase("Cyber Security")) {
 
-                <ul>
-                    <li>Linux</li>
-                    <li>Networking</li>
-                    <li>Ethical Hacking</li>
-                </ul>
-                """
+            return pageTemplate(
+                    "Skill Gap Analysis",
+                    """
+                    <h1>📊 Cyber Security Skill Gap</h1>
+
+                    <ul>
+                        <li>Linux</li>
+                        <li>Networking</li>
+                        <li>Ethical Hacking</li>
+                    </ul>
+                    """
+            );
+        }
+
+        return pageTemplate(
+                "Error",
+                "<h1>Role not found</h1>"
         );
     }
 
@@ -127,7 +135,6 @@ public class HomeController {
 
         return """
                 <html>
-
                 <head>
 
                 <title>%s</title>
@@ -183,37 +190,6 @@ public class HomeController {
                 <a href="/">⬅ Back To Home</a>
 
                 </div>
-                @GetMapping("/resume-analysis")
-                public String resumeAnalysis(
-                        @RequestParam String resume) {
-                
-                    return pageTemplate(
-                            "Resume Analysis",
-                            ""\"
-                            <h1>📄 Resume Analysis</h1>
-                
-                            <h2>Strengths</h2>
-                
-                            <ul>
-                                <li>Good technical background</li>
-                                <li>Project experience present</li>
-                                <li>Programming skills included</li>
-                            </ul>
-                
-                            <h2>Suggestions</h2>
-                
-                            <ul>
-                                <li>Add more projects</li>
-                                <li>Add certifications</li>
-                                <li>Improve LinkedIn profile</li>
-                            </ul>
-                
-                            <h2>Resume Score</h2>
-                
-                            <h1>78 / 100</h1>
-                            ""\"
-                    );
-                }
 
                 </body>
 
