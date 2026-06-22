@@ -1,5 +1,11 @@
 function generateRoadmap() {
-    alert("Roadmap button clicked!");
+
+    const role = document.getElementById("role").value;
+
+    alert(role);
+
+    window.location.href =
+        "/roadmap?role=" + encodeURIComponent(role);
 }
 
 function analyzeSkills() {
